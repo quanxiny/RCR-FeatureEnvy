@@ -1,0 +1,997 @@
+{
+  "protocol": {
+    "development_unit": "fold 1 seed 42",
+    "folds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "increments": 3,
+    "kind": "project-incremental single-task learning",
+    "model_objective": "Focal + CL6 unless explicitly ablated",
+    "outer_test_policy": "evaluation only after each fixed-budget stage",
+    "replay_ratio": 0.1,
+    "replay_unit": "complete refactoring case",
+    "seeds": [
+      42,
+      123,
+      2024
+    ],
+    "stage_epochs": 8,
+    "task": 2
+  },
+  "runs": [
+    {
+      "base_objective": "focal",
+      "extra": [],
+      "fold": 1,
+      "kind": "ablation",
+      "method": "replay",
+      "result_dir": "results/continual/runs/task2_fold1_seed42_replay_r10_e8",
+      "run_name": "task2_fold1_seed42_replay_r10_e8",
+      "seed": 42,
+      "variant": "focal_replay"
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5"
+      ],
+      "fold": 1,
+      "kind": "ablation",
+      "method": "replay_kd",
+      "result_dir": "results/continual/runs/task2_fold1_seed42_replay_kd_cl6_r10_kd0.5_e8",
+      "run_name": "task2_fold1_seed42_replay_kd_cl6_r10_kd0.5_e8",
+      "seed": 42,
+      "variant": "logit_only"
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5",
+        "--embedding-distillation",
+        "0.1",
+        "--attention-distillation",
+        "0.0"
+      ],
+      "fold": 1,
+      "kind": "ablation",
+      "method": "replay_relation",
+      "result_dir": "results/continual/runs/task2_fold1_seed42_replay_relation_cl6_r10_kd0.5_z0.1_a0_e8",
+      "run_name": "task2_fold1_seed42_replay_relation_cl6_r10_kd0.5_z0.1_a0_e8",
+      "seed": 42,
+      "variant": "no_attention"
+    },
+    {
+      "base_objective": "focal",
+      "extra": [],
+      "fold": 2,
+      "kind": "ablation",
+      "method": "replay",
+      "result_dir": "results/continual/runs/task2_fold2_seed42_replay_r10_e8",
+      "run_name": "task2_fold2_seed42_replay_r10_e8",
+      "seed": 42,
+      "variant": "focal_replay"
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5"
+      ],
+      "fold": 2,
+      "kind": "ablation",
+      "method": "replay_kd",
+      "result_dir": "results/continual/runs/task2_fold2_seed42_replay_kd_cl6_r10_kd0.5_e8",
+      "run_name": "task2_fold2_seed42_replay_kd_cl6_r10_kd0.5_e8",
+      "seed": 42,
+      "variant": "logit_only"
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5",
+        "--embedding-distillation",
+        "0.1",
+        "--attention-distillation",
+        "0.0"
+      ],
+      "fold": 2,
+      "kind": "ablation",
+      "method": "replay_relation",
+      "result_dir": "results/continual/runs/task2_fold2_seed42_replay_relation_cl6_r10_kd0.5_z0.1_a0_e8",
+      "run_name": "task2_fold2_seed42_replay_relation_cl6_r10_kd0.5_z0.1_a0_e8",
+      "seed": 42,
+      "variant": "no_attention"
+    },
+    {
+      "base_objective": "focal",
+      "extra": [],
+      "fold": 3,
+      "kind": "ablation",
+      "method": "replay",
+      "result_dir": "results/continual/runs/task2_fold3_seed42_replay_r10_e8",
+      "run_name": "task2_fold3_seed42_replay_r10_e8",
+      "seed": 42,
+      "variant": "focal_replay"
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5"
+      ],
+      "fold": 3,
+      "kind": "ablation",
+      "method": "replay_kd",
+      "result_dir": "results/continual/runs/task2_fold3_seed42_replay_kd_cl6_r10_kd0.5_e8",
+      "run_name": "task2_fold3_seed42_replay_kd_cl6_r10_kd0.5_e8",
+      "seed": 42,
+      "variant": "logit_only"
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5",
+        "--embedding-distillation",
+        "0.1",
+        "--attention-distillation",
+        "0.0"
+      ],
+      "fold": 3,
+      "kind": "ablation",
+      "method": "replay_relation",
+      "result_dir": "results/continual/runs/task2_fold3_seed42_replay_relation_cl6_r10_kd0.5_z0.1_a0_e8",
+      "run_name": "task2_fold3_seed42_replay_relation_cl6_r10_kd0.5_z0.1_a0_e8",
+      "seed": 42,
+      "variant": "no_attention"
+    },
+    {
+      "base_objective": "focal",
+      "extra": [],
+      "fold": 4,
+      "kind": "ablation",
+      "method": "replay",
+      "result_dir": "results/continual/runs/task2_fold4_seed42_replay_r10_e8",
+      "run_name": "task2_fold4_seed42_replay_r10_e8",
+      "seed": 42,
+      "variant": "focal_replay"
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5"
+      ],
+      "fold": 4,
+      "kind": "ablation",
+      "method": "replay_kd",
+      "result_dir": "results/continual/runs/task2_fold4_seed42_replay_kd_cl6_r10_kd0.5_e8",
+      "run_name": "task2_fold4_seed42_replay_kd_cl6_r10_kd0.5_e8",
+      "seed": 42,
+      "variant": "logit_only"
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5",
+        "--embedding-distillation",
+        "0.1",
+        "--attention-distillation",
+        "0.0"
+      ],
+      "fold": 4,
+      "kind": "ablation",
+      "method": "replay_relation",
+      "result_dir": "results/continual/runs/task2_fold4_seed42_replay_relation_cl6_r10_kd0.5_z0.1_a0_e8",
+      "run_name": "task2_fold4_seed42_replay_relation_cl6_r10_kd0.5_z0.1_a0_e8",
+      "seed": 42,
+      "variant": "no_attention"
+    },
+    {
+      "base_objective": "focal",
+      "extra": [],
+      "fold": 5,
+      "kind": "ablation",
+      "method": "replay",
+      "result_dir": "results/continual/runs/task2_fold5_seed42_replay_r10_e8",
+      "run_name": "task2_fold5_seed42_replay_r10_e8",
+      "seed": 42,
+      "variant": "focal_replay"
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5"
+      ],
+      "fold": 5,
+      "kind": "ablation",
+      "method": "replay_kd",
+      "result_dir": "results/continual/runs/task2_fold5_seed42_replay_kd_cl6_r10_kd0.5_e8",
+      "run_name": "task2_fold5_seed42_replay_kd_cl6_r10_kd0.5_e8",
+      "seed": 42,
+      "variant": "logit_only"
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5",
+        "--embedding-distillation",
+        "0.1",
+        "--attention-distillation",
+        "0.0"
+      ],
+      "fold": 5,
+      "kind": "ablation",
+      "method": "replay_relation",
+      "result_dir": "results/continual/runs/task2_fold5_seed42_replay_relation_cl6_r10_kd0.5_z0.1_a0_e8",
+      "run_name": "task2_fold5_seed42_replay_relation_cl6_r10_kd0.5_z0.1_a0_e8",
+      "seed": 42,
+      "variant": "no_attention"
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 1,
+      "kind": "primary",
+      "method": "ewc",
+      "result_dir": "results/continual/runs/task2_fold1_seed42_ewc_cl6_l10_e8",
+      "run_name": "task2_fold1_seed42_ewc_cl6_l10_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 1,
+      "kind": "primary",
+      "method": "naive",
+      "result_dir": "results/continual/runs/task2_fold1_seed42_naive_cl6_e8",
+      "run_name": "task2_fold1_seed42_naive_cl6_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 1,
+      "kind": "primary",
+      "method": "replay",
+      "result_dir": "results/continual/runs/task2_fold1_seed42_replay_cl6_r10_e8",
+      "run_name": "task2_fold1_seed42_replay_cl6_r10_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5",
+        "--embedding-distillation",
+        "0.1",
+        "--attention-distillation",
+        "0.1"
+      ],
+      "fold": 1,
+      "kind": "primary",
+      "method": "replay_relation",
+      "result_dir": "results/continual/runs/task2_fold1_seed42_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "run_name": "task2_fold1_seed42_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 2,
+      "kind": "primary",
+      "method": "ewc",
+      "result_dir": "results/continual/runs/task2_fold2_seed42_ewc_cl6_l10_e8",
+      "run_name": "task2_fold2_seed42_ewc_cl6_l10_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 2,
+      "kind": "primary",
+      "method": "naive",
+      "result_dir": "results/continual/runs/task2_fold2_seed42_naive_cl6_e8",
+      "run_name": "task2_fold2_seed42_naive_cl6_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 2,
+      "kind": "primary",
+      "method": "replay",
+      "result_dir": "results/continual/runs/task2_fold2_seed42_replay_cl6_r10_e8",
+      "run_name": "task2_fold2_seed42_replay_cl6_r10_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5",
+        "--embedding-distillation",
+        "0.1",
+        "--attention-distillation",
+        "0.1"
+      ],
+      "fold": 2,
+      "kind": "primary",
+      "method": "replay_relation",
+      "result_dir": "results/continual/runs/task2_fold2_seed42_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "run_name": "task2_fold2_seed42_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 3,
+      "kind": "primary",
+      "method": "ewc",
+      "result_dir": "results/continual/runs/task2_fold3_seed42_ewc_cl6_l10_e8",
+      "run_name": "task2_fold3_seed42_ewc_cl6_l10_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 3,
+      "kind": "primary",
+      "method": "naive",
+      "result_dir": "results/continual/runs/task2_fold3_seed42_naive_cl6_e8",
+      "run_name": "task2_fold3_seed42_naive_cl6_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 3,
+      "kind": "primary",
+      "method": "replay",
+      "result_dir": "results/continual/runs/task2_fold3_seed42_replay_cl6_r10_e8",
+      "run_name": "task2_fold3_seed42_replay_cl6_r10_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5",
+        "--embedding-distillation",
+        "0.1",
+        "--attention-distillation",
+        "0.1"
+      ],
+      "fold": 3,
+      "kind": "primary",
+      "method": "replay_relation",
+      "result_dir": "results/continual/runs/task2_fold3_seed42_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "run_name": "task2_fold3_seed42_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 4,
+      "kind": "primary",
+      "method": "ewc",
+      "result_dir": "results/continual/runs/task2_fold4_seed42_ewc_cl6_l10_e8",
+      "run_name": "task2_fold4_seed42_ewc_cl6_l10_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 4,
+      "kind": "primary",
+      "method": "naive",
+      "result_dir": "results/continual/runs/task2_fold4_seed42_naive_cl6_e8",
+      "run_name": "task2_fold4_seed42_naive_cl6_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 4,
+      "kind": "primary",
+      "method": "replay",
+      "result_dir": "results/continual/runs/task2_fold4_seed42_replay_cl6_r10_e8",
+      "run_name": "task2_fold4_seed42_replay_cl6_r10_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5",
+        "--embedding-distillation",
+        "0.1",
+        "--attention-distillation",
+        "0.1"
+      ],
+      "fold": 4,
+      "kind": "primary",
+      "method": "replay_relation",
+      "result_dir": "results/continual/runs/task2_fold4_seed42_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "run_name": "task2_fold4_seed42_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 5,
+      "kind": "primary",
+      "method": "ewc",
+      "result_dir": "results/continual/runs/task2_fold5_seed42_ewc_cl6_l10_e8",
+      "run_name": "task2_fold5_seed42_ewc_cl6_l10_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 5,
+      "kind": "primary",
+      "method": "naive",
+      "result_dir": "results/continual/runs/task2_fold5_seed42_naive_cl6_e8",
+      "run_name": "task2_fold5_seed42_naive_cl6_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 5,
+      "kind": "primary",
+      "method": "replay",
+      "result_dir": "results/continual/runs/task2_fold5_seed42_replay_cl6_r10_e8",
+      "run_name": "task2_fold5_seed42_replay_cl6_r10_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5",
+        "--embedding-distillation",
+        "0.1",
+        "--attention-distillation",
+        "0.1"
+      ],
+      "fold": 5,
+      "kind": "primary",
+      "method": "replay_relation",
+      "result_dir": "results/continual/runs/task2_fold5_seed42_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "run_name": "task2_fold5_seed42_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 1,
+      "kind": "primary",
+      "method": "ewc",
+      "result_dir": "results/continual/runs/task2_fold1_seed123_ewc_cl6_l10_e8",
+      "run_name": "task2_fold1_seed123_ewc_cl6_l10_e8",
+      "seed": 123
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 1,
+      "kind": "primary",
+      "method": "naive",
+      "result_dir": "results/continual/runs/task2_fold1_seed123_naive_cl6_e8",
+      "run_name": "task2_fold1_seed123_naive_cl6_e8",
+      "seed": 123
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 1,
+      "kind": "primary",
+      "method": "replay",
+      "result_dir": "results/continual/runs/task2_fold1_seed123_replay_cl6_r10_e8",
+      "run_name": "task2_fold1_seed123_replay_cl6_r10_e8",
+      "seed": 123
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5",
+        "--embedding-distillation",
+        "0.1",
+        "--attention-distillation",
+        "0.1"
+      ],
+      "fold": 1,
+      "kind": "primary",
+      "method": "replay_relation",
+      "result_dir": "results/continual/runs/task2_fold1_seed123_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "run_name": "task2_fold1_seed123_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "seed": 123
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 2,
+      "kind": "primary",
+      "method": "ewc",
+      "result_dir": "results/continual/runs/task2_fold2_seed123_ewc_cl6_l10_e8",
+      "run_name": "task2_fold2_seed123_ewc_cl6_l10_e8",
+      "seed": 123
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 2,
+      "kind": "primary",
+      "method": "naive",
+      "result_dir": "results/continual/runs/task2_fold2_seed123_naive_cl6_e8",
+      "run_name": "task2_fold2_seed123_naive_cl6_e8",
+      "seed": 123
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 2,
+      "kind": "primary",
+      "method": "replay",
+      "result_dir": "results/continual/runs/task2_fold2_seed123_replay_cl6_r10_e8",
+      "run_name": "task2_fold2_seed123_replay_cl6_r10_e8",
+      "seed": 123
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5",
+        "--embedding-distillation",
+        "0.1",
+        "--attention-distillation",
+        "0.1"
+      ],
+      "fold": 2,
+      "kind": "primary",
+      "method": "replay_relation",
+      "result_dir": "results/continual/runs/task2_fold2_seed123_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "run_name": "task2_fold2_seed123_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "seed": 123
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 3,
+      "kind": "primary",
+      "method": "ewc",
+      "result_dir": "results/continual/runs/task2_fold3_seed123_ewc_cl6_l10_e8",
+      "run_name": "task2_fold3_seed123_ewc_cl6_l10_e8",
+      "seed": 123
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 3,
+      "kind": "primary",
+      "method": "naive",
+      "result_dir": "results/continual/runs/task2_fold3_seed123_naive_cl6_e8",
+      "run_name": "task2_fold3_seed123_naive_cl6_e8",
+      "seed": 123
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 3,
+      "kind": "primary",
+      "method": "replay",
+      "result_dir": "results/continual/runs/task2_fold3_seed123_replay_cl6_r10_e8",
+      "run_name": "task2_fold3_seed123_replay_cl6_r10_e8",
+      "seed": 123
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5",
+        "--embedding-distillation",
+        "0.1",
+        "--attention-distillation",
+        "0.1"
+      ],
+      "fold": 3,
+      "kind": "primary",
+      "method": "replay_relation",
+      "result_dir": "results/continual/runs/task2_fold3_seed123_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "run_name": "task2_fold3_seed123_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "seed": 123
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 4,
+      "kind": "primary",
+      "method": "ewc",
+      "result_dir": "results/continual/runs/task2_fold4_seed123_ewc_cl6_l10_e8",
+      "run_name": "task2_fold4_seed123_ewc_cl6_l10_e8",
+      "seed": 123
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 4,
+      "kind": "primary",
+      "method": "naive",
+      "result_dir": "results/continual/runs/task2_fold4_seed123_naive_cl6_e8",
+      "run_name": "task2_fold4_seed123_naive_cl6_e8",
+      "seed": 123
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 4,
+      "kind": "primary",
+      "method": "replay",
+      "result_dir": "results/continual/runs/task2_fold4_seed123_replay_cl6_r10_e8",
+      "run_name": "task2_fold4_seed123_replay_cl6_r10_e8",
+      "seed": 123
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5",
+        "--embedding-distillation",
+        "0.1",
+        "--attention-distillation",
+        "0.1"
+      ],
+      "fold": 4,
+      "kind": "primary",
+      "method": "replay_relation",
+      "result_dir": "results/continual/runs/task2_fold4_seed123_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "run_name": "task2_fold4_seed123_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "seed": 123
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 5,
+      "kind": "primary",
+      "method": "ewc",
+      "result_dir": "results/continual/runs/task2_fold5_seed123_ewc_cl6_l10_e8",
+      "run_name": "task2_fold5_seed123_ewc_cl6_l10_e8",
+      "seed": 123
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 5,
+      "kind": "primary",
+      "method": "naive",
+      "result_dir": "results/continual/runs/task2_fold5_seed123_naive_cl6_e8",
+      "run_name": "task2_fold5_seed123_naive_cl6_e8",
+      "seed": 123
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 5,
+      "kind": "primary",
+      "method": "replay",
+      "result_dir": "results/continual/runs/task2_fold5_seed123_replay_cl6_r10_e8",
+      "run_name": "task2_fold5_seed123_replay_cl6_r10_e8",
+      "seed": 123
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5",
+        "--embedding-distillation",
+        "0.1",
+        "--attention-distillation",
+        "0.1"
+      ],
+      "fold": 5,
+      "kind": "primary",
+      "method": "replay_relation",
+      "result_dir": "results/continual/runs/task2_fold5_seed123_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "run_name": "task2_fold5_seed123_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "seed": 123
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 1,
+      "kind": "primary",
+      "method": "ewc",
+      "result_dir": "results/continual/runs/task2_fold1_seed2024_ewc_cl6_l10_e8",
+      "run_name": "task2_fold1_seed2024_ewc_cl6_l10_e8",
+      "seed": 2024
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 1,
+      "kind": "primary",
+      "method": "naive",
+      "result_dir": "results/continual/runs/task2_fold1_seed2024_naive_cl6_e8",
+      "run_name": "task2_fold1_seed2024_naive_cl6_e8",
+      "seed": 2024
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 1,
+      "kind": "primary",
+      "method": "replay",
+      "result_dir": "results/continual/runs/task2_fold1_seed2024_replay_cl6_r10_e8",
+      "run_name": "task2_fold1_seed2024_replay_cl6_r10_e8",
+      "seed": 2024
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5",
+        "--embedding-distillation",
+        "0.1",
+        "--attention-distillation",
+        "0.1"
+      ],
+      "fold": 1,
+      "kind": "primary",
+      "method": "replay_relation",
+      "result_dir": "results/continual/runs/task2_fold1_seed2024_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "run_name": "task2_fold1_seed2024_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "seed": 2024
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 2,
+      "kind": "primary",
+      "method": "ewc",
+      "result_dir": "results/continual/runs/task2_fold2_seed2024_ewc_cl6_l10_e8",
+      "run_name": "task2_fold2_seed2024_ewc_cl6_l10_e8",
+      "seed": 2024
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 2,
+      "kind": "primary",
+      "method": "naive",
+      "result_dir": "results/continual/runs/task2_fold2_seed2024_naive_cl6_e8",
+      "run_name": "task2_fold2_seed2024_naive_cl6_e8",
+      "seed": 2024
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 2,
+      "kind": "primary",
+      "method": "replay",
+      "result_dir": "results/continual/runs/task2_fold2_seed2024_replay_cl6_r10_e8",
+      "run_name": "task2_fold2_seed2024_replay_cl6_r10_e8",
+      "seed": 2024
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5",
+        "--embedding-distillation",
+        "0.1",
+        "--attention-distillation",
+        "0.1"
+      ],
+      "fold": 2,
+      "kind": "primary",
+      "method": "replay_relation",
+      "result_dir": "results/continual/runs/task2_fold2_seed2024_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "run_name": "task2_fold2_seed2024_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "seed": 2024
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 3,
+      "kind": "primary",
+      "method": "ewc",
+      "result_dir": "results/continual/runs/task2_fold3_seed2024_ewc_cl6_l10_e8",
+      "run_name": "task2_fold3_seed2024_ewc_cl6_l10_e8",
+      "seed": 2024
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 3,
+      "kind": "primary",
+      "method": "naive",
+      "result_dir": "results/continual/runs/task2_fold3_seed2024_naive_cl6_e8",
+      "run_name": "task2_fold3_seed2024_naive_cl6_e8",
+      "seed": 2024
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 3,
+      "kind": "primary",
+      "method": "replay",
+      "result_dir": "results/continual/runs/task2_fold3_seed2024_replay_cl6_r10_e8",
+      "run_name": "task2_fold3_seed2024_replay_cl6_r10_e8",
+      "seed": 2024
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5",
+        "--embedding-distillation",
+        "0.1",
+        "--attention-distillation",
+        "0.1"
+      ],
+      "fold": 3,
+      "kind": "primary",
+      "method": "replay_relation",
+      "result_dir": "results/continual/runs/task2_fold3_seed2024_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "run_name": "task2_fold3_seed2024_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "seed": 2024
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 4,
+      "kind": "primary",
+      "method": "ewc",
+      "result_dir": "results/continual/runs/task2_fold4_seed2024_ewc_cl6_l10_e8",
+      "run_name": "task2_fold4_seed2024_ewc_cl6_l10_e8",
+      "seed": 2024
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 4,
+      "kind": "primary",
+      "method": "naive",
+      "result_dir": "results/continual/runs/task2_fold4_seed2024_naive_cl6_e8",
+      "run_name": "task2_fold4_seed2024_naive_cl6_e8",
+      "seed": 2024
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 4,
+      "kind": "primary",
+      "method": "replay",
+      "result_dir": "results/continual/runs/task2_fold4_seed2024_replay_cl6_r10_e8",
+      "run_name": "task2_fold4_seed2024_replay_cl6_r10_e8",
+      "seed": 2024
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5",
+        "--embedding-distillation",
+        "0.1",
+        "--attention-distillation",
+        "0.1"
+      ],
+      "fold": 4,
+      "kind": "primary",
+      "method": "replay_relation",
+      "result_dir": "results/continual/runs/task2_fold4_seed2024_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "run_name": "task2_fold4_seed2024_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "seed": 2024
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 5,
+      "kind": "primary",
+      "method": "ewc",
+      "result_dir": "results/continual/runs/task2_fold5_seed2024_ewc_cl6_l10_e8",
+      "run_name": "task2_fold5_seed2024_ewc_cl6_l10_e8",
+      "seed": 2024
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 5,
+      "kind": "primary",
+      "method": "naive",
+      "result_dir": "results/continual/runs/task2_fold5_seed2024_naive_cl6_e8",
+      "run_name": "task2_fold5_seed2024_naive_cl6_e8",
+      "seed": 2024
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 5,
+      "kind": "primary",
+      "method": "replay",
+      "result_dir": "results/continual/runs/task2_fold5_seed2024_replay_cl6_r10_e8",
+      "run_name": "task2_fold5_seed2024_replay_cl6_r10_e8",
+      "seed": 2024
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [
+        "--logit-distillation",
+        "0.5",
+        "--embedding-distillation",
+        "0.1",
+        "--attention-distillation",
+        "0.1"
+      ],
+      "fold": 5,
+      "kind": "primary",
+      "method": "replay_relation",
+      "result_dir": "results/continual/runs/task2_fold5_seed2024_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "run_name": "task2_fold5_seed2024_replay_relation_cl6_r10_kd0.5_z0.1_a0.1_e8",
+      "seed": 2024
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 1,
+      "kind": "upper_bound",
+      "method": "joint",
+      "result_dir": "results/continual/runs/task2_fold1_seed42_joint_cl6_e8",
+      "run_name": "task2_fold1_seed42_joint_cl6_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 2,
+      "kind": "upper_bound",
+      "method": "joint",
+      "result_dir": "results/continual/runs/task2_fold2_seed42_joint_cl6_e8",
+      "run_name": "task2_fold2_seed42_joint_cl6_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 3,
+      "kind": "upper_bound",
+      "method": "joint",
+      "result_dir": "results/continual/runs/task2_fold3_seed42_joint_cl6_e8",
+      "run_name": "task2_fold3_seed42_joint_cl6_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 4,
+      "kind": "upper_bound",
+      "method": "joint",
+      "result_dir": "results/continual/runs/task2_fold4_seed42_joint_cl6_e8",
+      "run_name": "task2_fold4_seed42_joint_cl6_e8",
+      "seed": 42
+    },
+    {
+      "base_objective": "cl6",
+      "extra": [],
+      "fold": 5,
+      "kind": "upper_bound",
+      "method": "joint",
+      "result_dir": "results/continual/runs/task2_fold5_seed42_joint_cl6_e8",
+      "run_name": "task2_fold5_seed42_joint_cl6_e8",
+      "seed": 42
+    }
+  ]
+}

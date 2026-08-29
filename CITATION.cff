@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying paper and CG-LSMN."
+title: "Relation-Aware Contrastive Replay for Continual Feature-Envy Detection"
+type: software
+version: 1.0.0
+date-released: 2026-08-28
+authors:
+  - family-names: Yang
+    given-names: Quanxin
+  - family-names: Yu
+    given-names: Dongjin
+  - family-names: Chen
+    given-names: Xin
+  - family-names: Xu
+    given-names: Yihang
+  - family-names: Yan
+    given-names: Wangliang
+  - family-names: Hu
+    given-names: Bin
+references:
+  - type: article
+    title: "Feature envy detection based on cross-graph local semantics matching"
+    authors:
+      - family-names: Yang
+        given-names: Quanxin
+      - family-names: Yu
+        given-names: Dongjin
+    journal: "Information and Software Technology"
+    volume: "174"
+    year: 2024
+    doi: "10.1016/j.infsof.2024.107515"

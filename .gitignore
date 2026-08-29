@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+logs/
+checkpoints/**/*.pt
+data/Dataset_*/allDataDict.json
+data/Dataset_*/dataItem/
+results/contrastive/runs/
+results/continual/runs/
+artifacts/metadata/all_samples.csv
+artifacts/metadata/all_samples.jsonl
+*.tmp
+.DS_Store

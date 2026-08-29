@@ -1,0 +1,31 @@
+name: case-preserving-project-incremental-cglsmn
+data_root: data
+metadata: artifacts/metadata/all_samples.csv
+task: 2
+fold: 1
+seed: 42
+outer_split_seed: 100
+increment_count: 3
+probe_fraction: 0.10
+increment_unit: project
+partition_unit: complete_case_id
+time_increment_available: false
+time_increment_rejection_reason: no reliable commit dates or repository history
+fixed_outer_test: true
+model: original_cglsmn_classifier
+loss: original_focal_loss
+methods: [naive, ewc, replay, replay_kd, replay_relation]
+stage_epochs: 8
+batch_size: 64
+backward_chunk: 64
+learning_rate: 0.001
+weight_decay: 0.0005
+replay_buffer_ratio: 0.10
+replay_unit: complete_case_id
+ewc_lambda: 10
+fisher_samples_per_stage: 512
+model_selection: none_fixed_budget
+probe_use: evaluation_only
+material_forgetting:
+  average_accuracy_drop: 0.02
+  any_probe_accuracy_drop: 0.05

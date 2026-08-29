@@ -1,0 +1,626 @@
+{
+  "ablation_protocol": {
+    "epochs": "reuse the corresponding full CL6 validation-selected epoch",
+    "outer_test_policy": "one evaluation; no ablation retuning on test",
+    "seed": 42,
+    "variants": {
+      "add_mutual": [
+        "--directed-lambda-positive",
+        "0.01",
+        "--directed-lambda-mutual",
+        "0.005",
+        "--directed-lambda-negative",
+        "0.0",
+        "--directed-warmup-epochs",
+        "3",
+        "--directed-ramp-epochs",
+        "2",
+        "--directed-max-aux-ratio",
+        "0.25"
+      ],
+      "add_negative": [
+        "--directed-lambda-positive",
+        "0.01",
+        "--directed-lambda-mutual",
+        "0.0",
+        "--directed-lambda-negative",
+        "0.005",
+        "--directed-warmup-epochs",
+        "3",
+        "--directed-ramp-epochs",
+        "2",
+        "--directed-max-aux-ratio",
+        "0.25"
+      ],
+      "no_aux_cap": [
+        "--directed-lambda-positive",
+        "0.01",
+        "--directed-lambda-mutual",
+        "0.0",
+        "--directed-lambda-negative",
+        "0.0",
+        "--directed-warmup-epochs",
+        "3",
+        "--directed-ramp-epochs",
+        "2",
+        "--directed-max-aux-ratio",
+        "1.0"
+      ],
+      "no_curriculum": [
+        "--directed-lambda-positive",
+        "0.01",
+        "--directed-lambda-mutual",
+        "0.0",
+        "--directed-lambda-negative",
+        "0.0",
+        "--directed-warmup-epochs",
+        "0",
+        "--directed-ramp-epochs",
+        "1",
+        "--directed-max-aux-ratio",
+        "0.25"
+      ],
+      "remove_directed_loss": []
+    }
+  },
+  "ablation_runs": [
+    {
+      "fixed_train_epochs": 28,
+      "fold": 1,
+      "reference_epoch_source": "cl6_task2_fold1_seed42_directed_a1_pos_l010_v2",
+      "run_name": "cl6_task2_fold1_seed42_sci_ablation_add_mutual_e28",
+      "seed": 42,
+      "test_metrics": "results/contrastive/runs/cl6_task2_fold1_seed42_sci_ablation_add_mutual_e28/test_metrics.csv",
+      "variant": "add_mutual"
+    },
+    {
+      "fixed_train_epochs": 28,
+      "fold": 1,
+      "reference_epoch_source": "cl6_task2_fold1_seed42_directed_a1_pos_l010_v2",
+      "run_name": "cl6_task2_fold1_seed42_sci_ablation_add_negative_e28",
+      "seed": 42,
+      "test_metrics": "results/contrastive/runs/cl6_task2_fold1_seed42_sci_ablation_add_negative_e28/test_metrics.csv",
+      "variant": "add_negative"
+    },
+    {
+      "fixed_train_epochs": 28,
+      "fold": 1,
+      "reference_epoch_source": "cl6_task2_fold1_seed42_directed_a1_pos_l010_v2",
+      "run_name": "cl6_task2_fold1_seed42_sci_ablation_no_aux_cap_e28",
+      "seed": 42,
+      "test_metrics": "results/contrastive/runs/cl6_task2_fold1_seed42_sci_ablation_no_aux_cap_e28/test_metrics.csv",
+      "variant": "no_aux_cap"
+    },
+    {
+      "fixed_train_epochs": 28,
+      "fold": 1,
+      "reference_epoch_source": "cl6_task2_fold1_seed42_directed_a1_pos_l010_v2",
+      "run_name": "cl6_task2_fold1_seed42_sci_ablation_no_curriculum_e28",
+      "seed": 42,
+      "test_metrics": "results/contrastive/runs/cl6_task2_fold1_seed42_sci_ablation_no_curriculum_e28/test_metrics.csv",
+      "variant": "no_curriculum"
+    },
+    {
+      "fixed_train_epochs": 28,
+      "fold": 1,
+      "reference_epoch_source": "cl6_task2_fold1_seed42_directed_a1_pos_l010_v2",
+      "run_name": "cl5_task2_fold1_seed42_sci_ablation_remove_directed_loss_e28",
+      "seed": 42,
+      "selected_train_epochs": 28,
+      "test_metrics": "results/contrastive/runs/cl5_task2_fold1_seed42_sci_ablation_remove_directed_loss_e28/test_metrics.csv",
+      "variant": "remove_directed_loss"
+    },
+    {
+      "fixed_train_epochs": 9,
+      "fold": 2,
+      "reference_epoch_source": "cl6_task2_fold2_seed42_fivefold_cl6_tune",
+      "run_name": "cl6_task2_fold2_seed42_sci_ablation_add_mutual_e9",
+      "seed": 42,
+      "test_metrics": "results/contrastive/runs/cl6_task2_fold2_seed42_sci_ablation_add_mutual_e9/test_metrics.csv",
+      "variant": "add_mutual"
+    },
+    {
+      "fixed_train_epochs": 9,
+      "fold": 2,
+      "reference_epoch_source": "cl6_task2_fold2_seed42_fivefold_cl6_tune",
+      "run_name": "cl6_task2_fold2_seed42_sci_ablation_add_negative_e9",
+      "seed": 42,
+      "test_metrics": "results/contrastive/runs/cl6_task2_fold2_seed42_sci_ablation_add_negative_e9/test_metrics.csv",
+      "variant": "add_negative"
+    },
+    {
+      "fixed_train_epochs": 9,
+      "fold": 2,
+      "reference_epoch_source": "cl6_task2_fold2_seed42_fivefold_cl6_tune",
+      "run_name": "cl6_task2_fold2_seed42_sci_ablation_no_aux_cap_e9",
+      "seed": 42,
+      "test_metrics": "results/contrastive/runs/cl6_task2_fold2_seed42_sci_ablation_no_aux_cap_e9/test_metrics.csv",
+      "variant": "no_aux_cap"
+    },
+    {
+      "fixed_train_epochs": 9,
+      "fold": 2,
+      "reference_epoch_source": "cl6_task2_fold2_seed42_fivefold_cl6_tune",
+      "run_name": "cl6_task2_fold2_seed42_sci_ablation_no_curriculum_e9",
+      "seed": 42,
+      "test_metrics": "results/contrastive/runs/cl6_task2_fold2_seed42_sci_ablation_no_curriculum_e9/test_metrics.csv",
+      "variant": "no_curriculum"
+    },
+    {
+      "fixed_train_epochs": 9,
+      "fold": 2,
+      "reference_epoch_source": "cl6_task2_fold2_seed42_fivefold_cl6_tune",
+      "run_name": "cl5_task2_fold2_seed42_sci_ablation_remove_directed_loss_e9",
+      "seed": 42,
+      "selected_train_epochs": 9,
+      "test_metrics": "results/contrastive/runs/cl5_task2_fold2_seed42_sci_ablation_remove_directed_loss_e9/test_metrics.csv",
+      "variant": "remove_directed_loss"
+    },
+    {
+      "fixed_train_epochs": 22,
+      "fold": 3,
+      "reference_epoch_source": "cl6_task2_fold3_seed42_fivefold_cl6_tune",
+      "run_name": "cl6_task2_fold3_seed42_sci_ablation_add_mutual_e22",
+      "seed": 42,
+      "test_metrics": "results/contrastive/runs/cl6_task2_fold3_seed42_sci_ablation_add_mutual_e22/test_metrics.csv",
+      "variant": "add_mutual"
+    },
+    {
+      "fixed_train_epochs": 22,
+      "fold": 3,
+      "reference_epoch_source": "cl6_task2_fold3_seed42_fivefold_cl6_tune",
+      "run_name": "cl6_task2_fold3_seed42_sci_ablation_add_negative_e22",
+      "seed": 42,
+      "test_metrics": "results/contrastive/runs/cl6_task2_fold3_seed42_sci_ablation_add_negative_e22/test_metrics.csv",
+      "variant": "add_negative"
+    },
+    {
+      "fixed_train_epochs": 22,
+      "fold": 3,
+      "reference_epoch_source": "cl6_task2_fold3_seed42_fivefold_cl6_tune",
+      "run_name": "cl6_task2_fold3_seed42_sci_ablation_no_aux_cap_e22",
+      "seed": 42,
+      "test_metrics": "results/contrastive/runs/cl6_task2_fold3_seed42_sci_ablation_no_aux_cap_e22/test_metrics.csv",
+      "variant": "no_aux_cap"
+    },
+    {
+      "fixed_train_epochs": 22,
+      "fold": 3,
+      "reference_epoch_source": "cl6_task2_fold3_seed42_fivefold_cl6_tune",
+      "run_name": "cl6_task2_fold3_seed42_sci_ablation_no_curriculum_e22",
+      "seed": 42,
+      "test_metrics": "results/contrastive/runs/cl6_task2_fold3_seed42_sci_ablation_no_curriculum_e22/test_metrics.csv",
+      "variant": "no_curriculum"
+    },
+    {
+      "fixed_train_epochs": 22,
+      "fold": 3,
+      "reference_epoch_source": "cl6_task2_fold3_seed42_fivefold_cl6_tune",
+      "run_name": "cl5_task2_fold3_seed42_sci_ablation_remove_directed_loss_e22",
+      "seed": 42,
+      "selected_train_epochs": 22,
+      "test_metrics": "results/contrastive/runs/cl5_task2_fold3_seed42_sci_ablation_remove_directed_loss_e22/test_metrics.csv",
+      "variant": "remove_directed_loss"
+    },
+    {
+      "fixed_train_epochs": 4,
+      "fold": 4,
+      "reference_epoch_source": "cl6_task2_fold4_seed42_fivefold_cl6_tune",
+      "run_name": "cl6_task2_fold4_seed42_sci_ablation_add_mutual_e4",
+      "seed": 42,
+      "test_metrics": "results/contrastive/runs/cl6_task2_fold4_seed42_sci_ablation_add_mutual_e4/test_metrics.csv",
+      "variant": "add_mutual"
+    },
+    {
+      "fixed_train_epochs": 4,
+      "fold": 4,
+      "reference_epoch_source": "cl6_task2_fold4_seed42_fivefold_cl6_tune",
+      "run_name": "cl6_task2_fold4_seed42_sci_ablation_add_negative_e4",
+      "seed": 42,
+      "test_metrics": "results/contrastive/runs/cl6_task2_fold4_seed42_sci_ablation_add_negative_e4/test_metrics.csv",
+      "variant": "add_negative"
+    },
+    {
+      "fixed_train_epochs": 4,
+      "fold": 4,
+      "reference_epoch_source": "cl6_task2_fold4_seed42_fivefold_cl6_tune",
+      "run_name": "cl6_task2_fold4_seed42_sci_ablation_no_aux_cap_e4",
+      "seed": 42,
+      "test_metrics": "results/contrastive/runs/cl6_task2_fold4_seed42_sci_ablation_no_aux_cap_e4/test_metrics.csv",
+      "variant": "no_aux_cap"
+    },
+    {
+      "fixed_train_epochs": 4,
+      "fold": 4,
+      "reference_epoch_source": "cl6_task2_fold4_seed42_fivefold_cl6_tune",
+      "run_name": "cl6_task2_fold4_seed42_sci_ablation_no_curriculum_e4",
+      "seed": 42,
+      "test_metrics": "results/contrastive/runs/cl6_task2_fold4_seed42_sci_ablation_no_curriculum_e4/test_metrics.csv",
+      "variant": "no_curriculum"
+    },
+    {
+      "fixed_train_epochs": 4,
+      "fold": 4,
+      "reference_epoch_source": "cl6_task2_fold4_seed42_fivefold_cl6_tune",
+      "run_name": "cl5_task2_fold4_seed42_sci_ablation_remove_directed_loss_e4",
+      "seed": 42,
+      "selected_train_epochs": 4,
+      "test_metrics": "results/contrastive/runs/cl5_task2_fold4_seed42_sci_ablation_remove_directed_loss_e4/test_metrics.csv",
+      "variant": "remove_directed_loss"
+    },
+    {
+      "fixed_train_epochs": 7,
+      "fold": 5,
+      "reference_epoch_source": "cl6_task2_fold5_seed42_fivefold_cl6_tune",
+      "run_name": "cl6_task2_fold5_seed42_sci_ablation_add_mutual_e7",
+      "seed": 42,
+      "test_metrics": "results/contrastive/runs/cl6_task2_fold5_seed42_sci_ablation_add_mutual_e7/test_metrics.csv",
+      "variant": "add_mutual"
+    },
+    {
+      "fixed_train_epochs": 7,
+      "fold": 5,
+      "reference_epoch_source": "cl6_task2_fold5_seed42_fivefold_cl6_tune",
+      "run_name": "cl6_task2_fold5_seed42_sci_ablation_add_negative_e7",
+      "seed": 42,
+      "test_metrics": "results/contrastive/runs/cl6_task2_fold5_seed42_sci_ablation_add_negative_e7/test_metrics.csv",
+      "variant": "add_negative"
+    },
+    {
+      "fixed_train_epochs": 7,
+      "fold": 5,
+      "reference_epoch_source": "cl6_task2_fold5_seed42_fivefold_cl6_tune",
+      "run_name": "cl6_task2_fold5_seed42_sci_ablation_no_aux_cap_e7",
+      "seed": 42,
+      "test_metrics": "results/contrastive/runs/cl6_task2_fold5_seed42_sci_ablation_no_aux_cap_e7/test_metrics.csv",
+      "variant": "no_aux_cap"
+    },
+    {
+      "fixed_train_epochs": 7,
+      "fold": 5,
+      "reference_epoch_source": "cl6_task2_fold5_seed42_fivefold_cl6_tune",
+      "run_name": "cl6_task2_fold5_seed42_sci_ablation_no_curriculum_e7",
+      "seed": 42,
+      "test_metrics": "results/contrastive/runs/cl6_task2_fold5_seed42_sci_ablation_no_curriculum_e7/test_metrics.csv",
+      "variant": "no_curriculum"
+    },
+    {
+      "fixed_train_epochs": 7,
+      "fold": 5,
+      "reference_epoch_source": "cl6_task2_fold5_seed42_fivefold_cl6_tune",
+      "run_name": "cl5_task2_fold5_seed42_sci_ablation_remove_directed_loss_e7",
+      "seed": 42,
+      "selected_train_epochs": 7,
+      "test_metrics": "results/contrastive/runs/cl5_task2_fold5_seed42_sci_ablation_remove_directed_loss_e7/test_metrics.csv",
+      "variant": "remove_directed_loss"
+    }
+  ],
+  "detector_runs": [
+    {
+      "control": {
+        "full_run": "cl5_task2_fold1_seed42_task2_matched_focal_full_mcc_e15",
+        "selected_train_epochs": 15,
+        "test_metrics": "results/contrastive/runs/cl5_task2_fold1_seed42_task2_matched_focal_full_mcc_e15/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl5_task2_fold1_seed42_task2_matched_focal_full_mcc_e15/threshold_transfer.json",
+        "tuning_run": "cl5_task2_fold1_seed42_task2_matched_focal_only"
+      },
+      "fold": 1,
+      "improved": {
+        "full_run": "cl6_task2_fold1_seed42_directed_selected_a1_e28",
+        "selected_train_epochs": 28,
+        "test_metrics": "results/contrastive/runs/cl6_task2_fold1_seed42_directed_selected_a1_e28/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl6_task2_fold1_seed42_directed_selected_a1_e28/threshold_transfer.json",
+        "tuning_run": "cl6_task2_fold1_seed42_directed_a1_pos_l010_v2"
+      },
+      "seed": 42,
+      "task": 2
+    },
+    {
+      "control": {
+        "full_run": "cl5_task2_fold2_seed42_fivefold_focal_full_e14",
+        "selected_train_epochs": 14,
+        "test_metrics": "results/contrastive/runs/cl5_task2_fold2_seed42_fivefold_focal_full_e14/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl5_task2_fold2_seed42_fivefold_focal_full_e14/threshold_transfer.json",
+        "tuning_run": "cl5_task2_fold2_seed42_fivefold_focal_tune"
+      },
+      "fold": 2,
+      "improved": {
+        "full_run": "cl6_task2_fold2_seed42_fivefold_cl6_full_e9",
+        "selected_train_epochs": 9,
+        "test_metrics": "results/contrastive/runs/cl6_task2_fold2_seed42_fivefold_cl6_full_e9/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl6_task2_fold2_seed42_fivefold_cl6_full_e9/threshold_transfer.json",
+        "tuning_run": "cl6_task2_fold2_seed42_fivefold_cl6_tune"
+      },
+      "seed": 42,
+      "task": 2
+    },
+    {
+      "control": {
+        "full_run": "cl5_task2_fold3_seed42_fivefold_focal_full_e11",
+        "selected_train_epochs": 11,
+        "test_metrics": "results/contrastive/runs/cl5_task2_fold3_seed42_fivefold_focal_full_e11/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl5_task2_fold3_seed42_fivefold_focal_full_e11/threshold_transfer.json",
+        "tuning_run": "cl5_task2_fold3_seed42_fivefold_focal_tune"
+      },
+      "fold": 3,
+      "improved": {
+        "full_run": "cl6_task2_fold3_seed42_fivefold_cl6_full_e22",
+        "selected_train_epochs": 22,
+        "test_metrics": "results/contrastive/runs/cl6_task2_fold3_seed42_fivefold_cl6_full_e22/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl6_task2_fold3_seed42_fivefold_cl6_full_e22/threshold_transfer.json",
+        "tuning_run": "cl6_task2_fold3_seed42_fivefold_cl6_tune"
+      },
+      "seed": 42,
+      "task": 2
+    },
+    {
+      "control": {
+        "full_run": "cl5_task2_fold4_seed42_fivefold_focal_full_e8",
+        "selected_train_epochs": 8,
+        "test_metrics": "results/contrastive/runs/cl5_task2_fold4_seed42_fivefold_focal_full_e8/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl5_task2_fold4_seed42_fivefold_focal_full_e8/threshold_transfer.json",
+        "tuning_run": "cl5_task2_fold4_seed42_fivefold_focal_tune"
+      },
+      "fold": 4,
+      "improved": {
+        "full_run": "cl6_task2_fold4_seed42_fivefold_cl6_full_e4",
+        "selected_train_epochs": 4,
+        "test_metrics": "results/contrastive/runs/cl6_task2_fold4_seed42_fivefold_cl6_full_e4/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl6_task2_fold4_seed42_fivefold_cl6_full_e4/threshold_transfer.json",
+        "tuning_run": "cl6_task2_fold4_seed42_fivefold_cl6_tune"
+      },
+      "seed": 42,
+      "task": 2
+    },
+    {
+      "control": {
+        "full_run": "cl5_task2_fold5_seed42_fivefold_focal_full_e1",
+        "selected_train_epochs": 1,
+        "test_metrics": "results/contrastive/runs/cl5_task2_fold5_seed42_fivefold_focal_full_e1/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl5_task2_fold5_seed42_fivefold_focal_full_e1/threshold_transfer.json",
+        "tuning_run": "cl5_task2_fold5_seed42_fivefold_focal_tune"
+      },
+      "fold": 5,
+      "improved": {
+        "full_run": "cl6_task2_fold5_seed42_fivefold_cl6_full_e7",
+        "selected_train_epochs": 7,
+        "test_metrics": "results/contrastive/runs/cl6_task2_fold5_seed42_fivefold_cl6_full_e7/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl6_task2_fold5_seed42_fivefold_cl6_full_e7/threshold_transfer.json",
+        "tuning_run": "cl6_task2_fold5_seed42_fivefold_cl6_tune"
+      },
+      "seed": 42,
+      "task": 2
+    },
+    {
+      "control": {
+        "checkpoint": "checkpoints/contrastive/runs/cl5_task2_fold1_seed123_sci_focal_full_e12/best.pt",
+        "full_run": "cl5_task2_fold1_seed123_sci_focal_full_e12",
+        "selected_train_epochs": 12,
+        "test_metrics": "results/contrastive/runs/cl5_task2_fold1_seed123_sci_focal_full_e12/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl5_task2_fold1_seed123_sci_focal_full_e12/threshold_transfer.json",
+        "tuning_run": "cl5_task2_fold1_seed123_sci_focal_tune"
+      },
+      "fold": 1,
+      "improved": {
+        "checkpoint": "checkpoints/contrastive/runs/cl6_task2_fold1_seed123_sci_cl6_full_e10/best.pt",
+        "full_run": "cl6_task2_fold1_seed123_sci_cl6_full_e10",
+        "selected_train_epochs": 10,
+        "test_metrics": "results/contrastive/runs/cl6_task2_fold1_seed123_sci_cl6_full_e10/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl6_task2_fold1_seed123_sci_cl6_full_e10/threshold_transfer.json",
+        "tuning_run": "cl6_task2_fold1_seed123_sci_cl6_tune"
+      },
+      "seed": 123,
+      "task": 2
+    },
+    {
+      "control": {
+        "checkpoint": "checkpoints/contrastive/runs/cl5_task2_fold2_seed123_sci_focal_full_e1/best.pt",
+        "full_run": "cl5_task2_fold2_seed123_sci_focal_full_e1",
+        "selected_train_epochs": 1,
+        "test_metrics": "results/contrastive/runs/cl5_task2_fold2_seed123_sci_focal_full_e1/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl5_task2_fold2_seed123_sci_focal_full_e1/threshold_transfer.json",
+        "tuning_run": "cl5_task2_fold2_seed123_sci_focal_tune"
+      },
+      "fold": 2,
+      "improved": {
+        "checkpoint": "checkpoints/contrastive/runs/cl6_task2_fold2_seed123_sci_cl6_full_e4/best.pt",
+        "full_run": "cl6_task2_fold2_seed123_sci_cl6_full_e4",
+        "selected_train_epochs": 4,
+        "test_metrics": "results/contrastive/runs/cl6_task2_fold2_seed123_sci_cl6_full_e4/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl6_task2_fold2_seed123_sci_cl6_full_e4/threshold_transfer.json",
+        "tuning_run": "cl6_task2_fold2_seed123_sci_cl6_tune"
+      },
+      "seed": 123,
+      "task": 2
+    },
+    {
+      "control": {
+        "checkpoint": "checkpoints/contrastive/runs/cl5_task2_fold3_seed123_sci_focal_full_e7/best.pt",
+        "full_run": "cl5_task2_fold3_seed123_sci_focal_full_e7",
+        "selected_train_epochs": 7,
+        "test_metrics": "results/contrastive/runs/cl5_task2_fold3_seed123_sci_focal_full_e7/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl5_task2_fold3_seed123_sci_focal_full_e7/threshold_transfer.json",
+        "tuning_run": "cl5_task2_fold3_seed123_sci_focal_tune"
+      },
+      "fold": 3,
+      "improved": {
+        "checkpoint": "checkpoints/contrastive/runs/cl6_task2_fold3_seed123_sci_cl6_full_e7/best.pt",
+        "full_run": "cl6_task2_fold3_seed123_sci_cl6_full_e7",
+        "selected_train_epochs": 7,
+        "test_metrics": "results/contrastive/runs/cl6_task2_fold3_seed123_sci_cl6_full_e7/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl6_task2_fold3_seed123_sci_cl6_full_e7/threshold_transfer.json",
+        "tuning_run": "cl6_task2_fold3_seed123_sci_cl6_tune"
+      },
+      "seed": 123,
+      "task": 2
+    },
+    {
+      "control": {
+        "checkpoint": "checkpoints/contrastive/runs/cl5_task2_fold4_seed123_sci_focal_full_e11/best.pt",
+        "full_run": "cl5_task2_fold4_seed123_sci_focal_full_e11",
+        "selected_train_epochs": 11,
+        "test_metrics": "results/contrastive/runs/cl5_task2_fold4_seed123_sci_focal_full_e11/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl5_task2_fold4_seed123_sci_focal_full_e11/threshold_transfer.json",
+        "tuning_run": "cl5_task2_fold4_seed123_sci_focal_tune"
+      },
+      "fold": 4,
+      "improved": {
+        "checkpoint": "checkpoints/contrastive/runs/cl6_task2_fold4_seed123_sci_cl6_full_e6/best.pt",
+        "full_run": "cl6_task2_fold4_seed123_sci_cl6_full_e6",
+        "selected_train_epochs": 6,
+        "test_metrics": "results/contrastive/runs/cl6_task2_fold4_seed123_sci_cl6_full_e6/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl6_task2_fold4_seed123_sci_cl6_full_e6/threshold_transfer.json",
+        "tuning_run": "cl6_task2_fold4_seed123_sci_cl6_tune"
+      },
+      "seed": 123,
+      "task": 2
+    },
+    {
+      "control": {
+        "checkpoint": "checkpoints/contrastive/runs/cl5_task2_fold5_seed123_sci_focal_full_e1/best.pt",
+        "full_run": "cl5_task2_fold5_seed123_sci_focal_full_e1",
+        "selected_train_epochs": 1,
+        "test_metrics": "results/contrastive/runs/cl5_task2_fold5_seed123_sci_focal_full_e1/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl5_task2_fold5_seed123_sci_focal_full_e1/threshold_transfer.json",
+        "tuning_run": "cl5_task2_fold5_seed123_sci_focal_tune"
+      },
+      "fold": 5,
+      "improved": {
+        "checkpoint": "checkpoints/contrastive/runs/cl6_task2_fold5_seed123_sci_cl6_full_e5/best.pt",
+        "full_run": "cl6_task2_fold5_seed123_sci_cl6_full_e5",
+        "selected_train_epochs": 5,
+        "test_metrics": "results/contrastive/runs/cl6_task2_fold5_seed123_sci_cl6_full_e5/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl6_task2_fold5_seed123_sci_cl6_full_e5/threshold_transfer.json",
+        "tuning_run": "cl6_task2_fold5_seed123_sci_cl6_tune"
+      },
+      "seed": 123,
+      "task": 2
+    },
+    {
+      "control": {
+        "checkpoint": "checkpoints/contrastive/runs/cl5_task2_fold1_seed2024_sci_focal_full_e5/best.pt",
+        "full_run": "cl5_task2_fold1_seed2024_sci_focal_full_e5",
+        "selected_train_epochs": 5,
+        "test_metrics": "results/contrastive/runs/cl5_task2_fold1_seed2024_sci_focal_full_e5/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl5_task2_fold1_seed2024_sci_focal_full_e5/threshold_transfer.json",
+        "tuning_run": "cl5_task2_fold1_seed2024_sci_focal_tune"
+      },
+      "fold": 1,
+      "improved": {
+        "checkpoint": "checkpoints/contrastive/runs/cl6_task2_fold1_seed2024_sci_cl6_full_e7/best.pt",
+        "full_run": "cl6_task2_fold1_seed2024_sci_cl6_full_e7",
+        "selected_train_epochs": 7,
+        "test_metrics": "results/contrastive/runs/cl6_task2_fold1_seed2024_sci_cl6_full_e7/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl6_task2_fold1_seed2024_sci_cl6_full_e7/threshold_transfer.json",
+        "tuning_run": "cl6_task2_fold1_seed2024_sci_cl6_tune"
+      },
+      "seed": 2024,
+      "task": 2
+    },
+    {
+      "control": {
+        "checkpoint": "checkpoints/contrastive/runs/cl5_task2_fold2_seed2024_sci_focal_full_e1/best.pt",
+        "full_run": "cl5_task2_fold2_seed2024_sci_focal_full_e1",
+        "selected_train_epochs": 1,
+        "test_metrics": "results/contrastive/runs/cl5_task2_fold2_seed2024_sci_focal_full_e1/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl5_task2_fold2_seed2024_sci_focal_full_e1/threshold_transfer.json",
+        "tuning_run": "cl5_task2_fold2_seed2024_sci_focal_tune"
+      },
+      "fold": 2,
+      "improved": {
+        "checkpoint": "checkpoints/contrastive/runs/cl6_task2_fold2_seed2024_sci_cl6_full_e7/best.pt",
+        "full_run": "cl6_task2_fold2_seed2024_sci_cl6_full_e7",
+        "selected_train_epochs": 7,
+        "test_metrics": "results/contrastive/runs/cl6_task2_fold2_seed2024_sci_cl6_full_e7/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl6_task2_fold2_seed2024_sci_cl6_full_e7/threshold_transfer.json",
+        "tuning_run": "cl6_task2_fold2_seed2024_sci_cl6_tune"
+      },
+      "seed": 2024,
+      "task": 2
+    },
+    {
+      "control": {
+        "checkpoint": "checkpoints/contrastive/runs/cl5_task2_fold3_seed2024_sci_focal_full_e5/best.pt",
+        "full_run": "cl5_task2_fold3_seed2024_sci_focal_full_e5",
+        "selected_train_epochs": 5,
+        "test_metrics": "results/contrastive/runs/cl5_task2_fold3_seed2024_sci_focal_full_e5/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl5_task2_fold3_seed2024_sci_focal_full_e5/threshold_transfer.json",
+        "tuning_run": "cl5_task2_fold3_seed2024_sci_focal_tune"
+      },
+      "fold": 3,
+      "improved": {
+        "checkpoint": "checkpoints/contrastive/runs/cl6_task2_fold3_seed2024_sci_cl6_full_e8/best.pt",
+        "full_run": "cl6_task2_fold3_seed2024_sci_cl6_full_e8",
+        "selected_train_epochs": 8,
+        "test_metrics": "results/contrastive/runs/cl6_task2_fold3_seed2024_sci_cl6_full_e8/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl6_task2_fold3_seed2024_sci_cl6_full_e8/threshold_transfer.json",
+        "tuning_run": "cl6_task2_fold3_seed2024_sci_cl6_tune"
+      },
+      "seed": 2024,
+      "task": 2
+    },
+    {
+      "control": {
+        "checkpoint": "checkpoints/contrastive/runs/cl5_task2_fold4_seed2024_sci_focal_full_e7/best.pt",
+        "full_run": "cl5_task2_fold4_seed2024_sci_focal_full_e7",
+        "selected_train_epochs": 7,
+        "test_metrics": "results/contrastive/runs/cl5_task2_fold4_seed2024_sci_focal_full_e7/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl5_task2_fold4_seed2024_sci_focal_full_e7/threshold_transfer.json",
+        "tuning_run": "cl5_task2_fold4_seed2024_sci_focal_tune"
+      },
+      "fold": 4,
+      "improved": {
+        "checkpoint": "checkpoints/contrastive/runs/cl6_task2_fold4_seed2024_sci_cl6_full_e10/best.pt",
+        "full_run": "cl6_task2_fold4_seed2024_sci_cl6_full_e10",
+        "selected_train_epochs": 10,
+        "test_metrics": "results/contrastive/runs/cl6_task2_fold4_seed2024_sci_cl6_full_e10/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl6_task2_fold4_seed2024_sci_cl6_full_e10/threshold_transfer.json",
+        "tuning_run": "cl6_task2_fold4_seed2024_sci_cl6_tune"
+      },
+      "seed": 2024,
+      "task": 2
+    },
+    {
+      "control": {
+        "checkpoint": "checkpoints/contrastive/runs/cl5_task2_fold5_seed2024_sci_focal_full_e1/best.pt",
+        "full_run": "cl5_task2_fold5_seed2024_sci_focal_full_e1",
+        "selected_train_epochs": 1,
+        "test_metrics": "results/contrastive/runs/cl5_task2_fold5_seed2024_sci_focal_full_e1/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl5_task2_fold5_seed2024_sci_focal_full_e1/threshold_transfer.json",
+        "tuning_run": "cl5_task2_fold5_seed2024_sci_focal_tune"
+      },
+      "fold": 5,
+      "improved": {
+        "checkpoint": "checkpoints/contrastive/runs/cl6_task2_fold5_seed2024_sci_cl6_full_e7/best.pt",
+        "full_run": "cl6_task2_fold5_seed2024_sci_cl6_full_e7",
+        "selected_train_epochs": 7,
+        "test_metrics": "results/contrastive/runs/cl6_task2_fold5_seed2024_sci_cl6_full_e7/test_metrics.csv",
+        "threshold_transfer": "results/contrastive/runs/cl6_task2_fold5_seed2024_sci_cl6_full_e7/threshold_transfer.json",
+        "tuning_run": "cl6_task2_fold5_seed2024_sci_cl6_tune"
+      },
+      "seed": 2024,
+      "task": 2
+    }
+  ],
+  "protocol": {
+    "confirmatory_units": "all five folds for new seeds 123 and 2024 (10 paired units)",
+    "development_units": "all five seed-42 folds observed before protocol freeze",
+    "folds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "inner_selection": "project-disjoint validation MCC",
+    "outer_split": "published project-disjoint five-fold",
+    "outer_test_policy": "one fixed-epoch evaluation per run",
+    "primary_threshold": 0.5,
+    "seeds": [
+      42,
+      123,
+      2024
+    ],
+    "task": 2
+  }
+}

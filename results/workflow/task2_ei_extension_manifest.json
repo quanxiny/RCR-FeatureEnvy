@@ -1,0 +1,428 @@
+{
+  "protocol": {
+    "budget_sensitivity_seed": 42,
+    "devices": [
+      "cuda:0",
+      "cuda:1"
+    ],
+    "folds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "primary_buffer_ratio": 0.1,
+    "seeds": [
+      42,
+      123,
+      2024
+    ],
+    "stage_epochs": 8,
+    "supcon_lambda": 0.2,
+    "supcon_temperature": 0.07,
+    "task": 2
+  },
+  "runs": [
+    {
+      "base_objective": "focal",
+      "buffer_ratio": 0.1,
+      "fold": 1,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold1_seed42_replay_r10_e8",
+      "seed": 42,
+      "variant": "focal_replay"
+    },
+    {
+      "base_objective": "supcon",
+      "buffer_ratio": 0.1,
+      "fold": 1,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold1_seed42_replay_supcon_t0.07_l0.2_r10_e8",
+      "seed": 42,
+      "variant": "supcon_replay"
+    },
+    {
+      "base_objective": "focal",
+      "buffer_ratio": 0.1,
+      "fold": 2,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold2_seed42_replay_r10_e8",
+      "seed": 42,
+      "variant": "focal_replay"
+    },
+    {
+      "base_objective": "supcon",
+      "buffer_ratio": 0.1,
+      "fold": 2,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold2_seed42_replay_supcon_t0.07_l0.2_r10_e8",
+      "seed": 42,
+      "variant": "supcon_replay"
+    },
+    {
+      "base_objective": "focal",
+      "buffer_ratio": 0.1,
+      "fold": 3,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold3_seed42_replay_r10_e8",
+      "seed": 42,
+      "variant": "focal_replay"
+    },
+    {
+      "base_objective": "supcon",
+      "buffer_ratio": 0.1,
+      "fold": 3,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold3_seed42_replay_supcon_t0.07_l0.2_r10_e8",
+      "seed": 42,
+      "variant": "supcon_replay"
+    },
+    {
+      "base_objective": "focal",
+      "buffer_ratio": 0.1,
+      "fold": 4,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold4_seed42_replay_r10_e8",
+      "seed": 42,
+      "variant": "focal_replay"
+    },
+    {
+      "base_objective": "supcon",
+      "buffer_ratio": 0.1,
+      "fold": 4,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold4_seed42_replay_supcon_t0.07_l0.2_r10_e8",
+      "seed": 42,
+      "variant": "supcon_replay"
+    },
+    {
+      "base_objective": "focal",
+      "buffer_ratio": 0.1,
+      "fold": 5,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold5_seed42_replay_r10_e8",
+      "seed": 42,
+      "variant": "focal_replay"
+    },
+    {
+      "base_objective": "supcon",
+      "buffer_ratio": 0.1,
+      "fold": 5,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold5_seed42_replay_supcon_t0.07_l0.2_r10_e8",
+      "seed": 42,
+      "variant": "supcon_replay"
+    },
+    {
+      "base_objective": "focal",
+      "buffer_ratio": 0.1,
+      "fold": 1,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold1_seed123_replay_r10_e8",
+      "seed": 123,
+      "variant": "focal_replay"
+    },
+    {
+      "base_objective": "supcon",
+      "buffer_ratio": 0.1,
+      "fold": 1,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold1_seed123_replay_supcon_t0.07_l0.2_r10_e8",
+      "seed": 123,
+      "variant": "supcon_replay"
+    },
+    {
+      "base_objective": "focal",
+      "buffer_ratio": 0.1,
+      "fold": 2,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold2_seed123_replay_r10_e8",
+      "seed": 123,
+      "variant": "focal_replay"
+    },
+    {
+      "base_objective": "supcon",
+      "buffer_ratio": 0.1,
+      "fold": 2,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold2_seed123_replay_supcon_t0.07_l0.2_r10_e8",
+      "seed": 123,
+      "variant": "supcon_replay"
+    },
+    {
+      "base_objective": "focal",
+      "buffer_ratio": 0.1,
+      "fold": 3,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold3_seed123_replay_r10_e8",
+      "seed": 123,
+      "variant": "focal_replay"
+    },
+    {
+      "base_objective": "supcon",
+      "buffer_ratio": 0.1,
+      "fold": 3,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold3_seed123_replay_supcon_t0.07_l0.2_r10_e8",
+      "seed": 123,
+      "variant": "supcon_replay"
+    },
+    {
+      "base_objective": "focal",
+      "buffer_ratio": 0.1,
+      "fold": 4,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold4_seed123_replay_r10_e8",
+      "seed": 123,
+      "variant": "focal_replay"
+    },
+    {
+      "base_objective": "supcon",
+      "buffer_ratio": 0.1,
+      "fold": 4,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold4_seed123_replay_supcon_t0.07_l0.2_r10_e8",
+      "seed": 123,
+      "variant": "supcon_replay"
+    },
+    {
+      "base_objective": "focal",
+      "buffer_ratio": 0.1,
+      "fold": 5,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold5_seed123_replay_r10_e8",
+      "seed": 123,
+      "variant": "focal_replay"
+    },
+    {
+      "base_objective": "supcon",
+      "buffer_ratio": 0.1,
+      "fold": 5,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold5_seed123_replay_supcon_t0.07_l0.2_r10_e8",
+      "seed": 123,
+      "variant": "supcon_replay"
+    },
+    {
+      "base_objective": "focal",
+      "buffer_ratio": 0.1,
+      "fold": 1,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold1_seed2024_replay_r10_e8",
+      "seed": 2024,
+      "variant": "focal_replay"
+    },
+    {
+      "base_objective": "supcon",
+      "buffer_ratio": 0.1,
+      "fold": 1,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold1_seed2024_replay_supcon_t0.07_l0.2_r10_e8",
+      "seed": 2024,
+      "variant": "supcon_replay"
+    },
+    {
+      "base_objective": "focal",
+      "buffer_ratio": 0.1,
+      "fold": 2,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold2_seed2024_replay_r10_e8",
+      "seed": 2024,
+      "variant": "focal_replay"
+    },
+    {
+      "base_objective": "supcon",
+      "buffer_ratio": 0.1,
+      "fold": 2,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold2_seed2024_replay_supcon_t0.07_l0.2_r10_e8",
+      "seed": 2024,
+      "variant": "supcon_replay"
+    },
+    {
+      "base_objective": "focal",
+      "buffer_ratio": 0.1,
+      "fold": 3,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold3_seed2024_replay_r10_e8",
+      "seed": 2024,
+      "variant": "focal_replay"
+    },
+    {
+      "base_objective": "supcon",
+      "buffer_ratio": 0.1,
+      "fold": 3,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold3_seed2024_replay_supcon_t0.07_l0.2_r10_e8",
+      "seed": 2024,
+      "variant": "supcon_replay"
+    },
+    {
+      "base_objective": "focal",
+      "buffer_ratio": 0.1,
+      "fold": 4,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold4_seed2024_replay_r10_e8",
+      "seed": 2024,
+      "variant": "focal_replay"
+    },
+    {
+      "base_objective": "supcon",
+      "buffer_ratio": 0.1,
+      "fold": 4,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold4_seed2024_replay_supcon_t0.07_l0.2_r10_e8",
+      "seed": 2024,
+      "variant": "supcon_replay"
+    },
+    {
+      "base_objective": "focal",
+      "buffer_ratio": 0.1,
+      "fold": 5,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold5_seed2024_replay_r10_e8",
+      "seed": 2024,
+      "variant": "focal_replay"
+    },
+    {
+      "base_objective": "supcon",
+      "buffer_ratio": 0.1,
+      "fold": 5,
+      "kind": "objective_ablation",
+      "method": "replay",
+      "run_name": "task2_fold5_seed2024_replay_supcon_t0.07_l0.2_r10_e8",
+      "seed": 2024,
+      "variant": "supcon_replay"
+    },
+    {
+      "base_objective": "cl6",
+      "buffer_ratio": 0.05,
+      "fold": 1,
+      "kind": "buffer_sensitivity",
+      "method": "replay_relation",
+      "run_name": "task2_fold1_seed42_replay_relation_cl6_r05_kd0.5_z0.1_a0.1_e8",
+      "seed": 42,
+      "variant": "relation_r05"
+    },
+    {
+      "base_objective": "cl6",
+      "buffer_ratio": 0.2,
+      "fold": 1,
+      "kind": "buffer_sensitivity",
+      "method": "replay_relation",
+      "run_name": "task2_fold1_seed42_replay_relation_cl6_r20_kd0.5_z0.1_a0.1_e8",
+      "seed": 42,
+      "variant": "relation_r20"
+    },
+    {
+      "base_objective": "cl6",
+      "buffer_ratio": 0.05,
+      "fold": 2,
+      "kind": "buffer_sensitivity",
+      "method": "replay_relation",
+      "run_name": "task2_fold2_seed42_replay_relation_cl6_r05_kd0.5_z0.1_a0.1_e8",
+      "seed": 42,
+      "variant": "relation_r05"
+    },
+    {
+      "base_objective": "cl6",
+      "buffer_ratio": 0.2,
+      "fold": 2,
+      "kind": "buffer_sensitivity",
+      "method": "replay_relation",
+      "run_name": "task2_fold2_seed42_replay_relation_cl6_r20_kd0.5_z0.1_a0.1_e8",
+      "seed": 42,
+      "variant": "relation_r20"
+    },
+    {
+      "base_objective": "cl6",
+      "buffer_ratio": 0.05,
+      "fold": 3,
+      "kind": "buffer_sensitivity",
+      "method": "replay_relation",
+      "run_name": "task2_fold3_seed42_replay_relation_cl6_r05_kd0.5_z0.1_a0.1_e8",
+      "seed": 42,
+      "variant": "relation_r05"
+    },
+    {
+      "base_objective": "cl6",
+      "buffer_ratio": 0.2,
+      "fold": 3,
+      "kind": "buffer_sensitivity",
+      "method": "replay_relation",
+      "run_name": "task2_fold3_seed42_replay_relation_cl6_r20_kd0.5_z0.1_a0.1_e8",
+      "seed": 42,
+      "variant": "relation_r20"
+    },
+    {
+      "base_objective": "cl6",
+      "buffer_ratio": 0.05,
+      "fold": 4,
+      "kind": "buffer_sensitivity",
+      "method": "replay_relation",
+      "run_name": "task2_fold4_seed42_replay_relation_cl6_r05_kd0.5_z0.1_a0.1_e8",
+      "seed": 42,
+      "variant": "relation_r05"
+    },
+    {
+      "base_objective": "cl6",
+      "buffer_ratio": 0.2,
+      "fold": 4,
+      "kind": "buffer_sensitivity",
+      "method": "replay_relation",
+      "run_name": "task2_fold4_seed42_replay_relation_cl6_r20_kd0.5_z0.1_a0.1_e8",
+      "seed": 42,
+      "variant": "relation_r20"
+    },
+    {
+      "base_objective": "cl6",
+      "buffer_ratio": 0.05,
+      "fold": 5,
+      "kind": "buffer_sensitivity",
+      "method": "replay_relation",
+      "run_name": "task2_fold5_seed42_replay_relation_cl6_r05_kd0.5_z0.1_a0.1_e8",
+      "seed": 42,
+      "variant": "relation_r05"
+    },
+    {
+      "base_objective": "cl6",
+      "buffer_ratio": 0.2,
+      "fold": 5,
+      "kind": "buffer_sensitivity",
+      "method": "replay_relation",
+      "run_name": "task2_fold5_seed42_replay_relation_cl6_r20_kd0.5_z0.1_a0.1_e8",
+      "seed": 42,
+      "variant": "relation_r20"
+    }
+  ]
+}

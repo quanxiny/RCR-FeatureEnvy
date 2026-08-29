@@ -1,0 +1,11 @@
+method: CL1
+temperature_default: 0.10
+temperature_grid: [0.07, 0.10, 0.20]
+lambda_label_default: 0.10
+lambda_label_grid: [0.05, 0.10, 0.20]
+projection_head: [128, relu, 64]
+normalize_projection: true
+selection_metric: mcc
+max_epochs: 50
+early_stopping_patience: 5
+final_retrain: full_outer_train_for_selected_epoch_count

@@ -1,0 +1,38 @@
+method: CL6
+task: 2
+classification_loss: original_focal_loss
+contrastive_unit: one_method_class_graph_pair
+direction: method_to_class
+levels: [type, call]
+anchor_source:
+  method_identifiers_intersect_target_methods_and_fields: true
+  manual_labels: false
+loss:
+  evidence_positive:
+    lambda_grid: [0.005, 0.010, 0.020]
+    temperature: 0.10
+  mutual_fallback:
+    lambda_grid: [0.0, 0.0025]
+    minimum_similarity: 0.80
+  pair_negative_hinge:
+    lambda_grid: [0.0, 0.0025]
+    margin: 0.65
+    topk: 8
+  maximum_negatives_per_anchor: 16
+  maximum_anchors_per_level: 64
+schedule:
+  focal_only_warmup_epochs: 3
+  ramp_epochs: 2
+  maximum_auxiliary_to_classification_loss_ratio: 0.25
+optimizer:
+  name: Adam
+  learning_rate: 0.001
+  weight_decay: 0.0005
+selection:
+  split: project_disjoint_inner_validation
+  metric: mcc
+  maximum_epochs: 50
+  patience: 5
+final:
+  retrain_on_full_outer_training_fold: true
+  evaluate_outer_test_once: true

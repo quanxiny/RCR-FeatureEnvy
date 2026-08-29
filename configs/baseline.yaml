@@ -1,0 +1,27 @@
+name: CG-LSMN-focal-control
+data_root: data
+tasks: [2]
+folds: [1, 2, 3, 4, 5]
+seeds: [42, 123, 2024]
+split_seed: 100
+epochs: 12
+batch_size: 64
+backward_chunk: 64
+learning_rate: 0.001
+weight_decay: 0.0005
+hidden: 128
+in_features: 128
+out_features: 128
+dropout: 0.1
+alpha: 0.2
+num_classes: 2
+model_selection: test_f1_legacy_protocol
+primary_metrics: [mcc, pr_auc, f1]
+baseline_source: published_five_fold_mean
+paper_reference:
+  task2:
+    precision: 0.7917
+    recall: 0.7006
+    f1: 0.7421
+    accuracy: 0.8592
+    auc_legacy: 0.9303
